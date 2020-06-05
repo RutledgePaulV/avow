@@ -30,6 +30,12 @@ essence of an assertion and ignores incidentals.
 
 ---
 
+### Alternatives
+
+* [motif](https://github.com/Invocatis/motif)
+
+---
+
 ### License
 
 This project is licensed under [MIT license](http://opensource.org/licenses/MIT).
