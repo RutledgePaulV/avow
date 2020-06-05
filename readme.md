@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/rutledgepaulv/avow.svg?branch=master)](https://travis-ci.com/rutledgepaulv/avow)
+[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.rutledgepaulv/avow.svg)](https://clojars.org/org.clojars.rutledgepaulv/avow)
+[![codecov](https://codecov.io/gh/rutledgepaulv/avow/branch/master/graph/badge.svg)](https://codecov.io/gh/rutledgepaulv/avow)
 
 > avow (verb)
 >

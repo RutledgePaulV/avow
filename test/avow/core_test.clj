@@ -5,9 +5,37 @@
 (deftest subsets-of-map-keys
   (are [pred expected actual] (pred (avow expected actual))
     true? {:a 1} {:a 1 :b 2}
+    true? {"a" 1} {"a" 1 "b" 2}
     true? {} {:a 1 :b 2}
     false? {:a 1} {:a 2 :b 2}
     false? {:a 1} {}))
+
+(deftest patterns
+  (are [pred expected actual] (pred (avow expected actual))
+    true? #"test" #"test"
+    false? #"test" #"tests"
+    true? #"test" "testing"
+    false? #"test" "badger"))
+
+(deftest sets
+  (are [pred expected actual] (pred (avow expected actual))
+    true? #{1 2 3} 1
+    true? (repeat #{#"bingo" #"bango"}) ["bingo"]))
+
+(deftest sequences
+  (are [pred expected actual] (pred (avow expected actual))
+    true? [1 2 3] '(1 2 3)
+    false? [1 2 3 4] '(1 2 3)))
+
+(deftest functions
+  (are [pred expected actual] (pred (avow expected actual))
+    true? pos? 1
+    false? neg? 2))
+
+(deftest map-as-conditionals
+  (are [pred expected actual] (pred (avow expected actual))
+    true? {pos? true odd? false} 4
+    false? {pos? true even? false} 4))
 
 (deftest differing-numerical-types
   (are [pred expected actual] (pred (avow expected actual))
