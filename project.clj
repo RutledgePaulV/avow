@@ -1,4 +1,4 @@
-(defproject org.clojars.rutledgepaulv/avow "0.1.0-SNAPSHOT"
+(defproject org.clojars.rutledgepaulv/avow "0.1.0"
 
   :description
   "An open definition of equality for more concise and robust tests."
