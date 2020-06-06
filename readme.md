@@ -32,7 +32,10 @@ essence of an assertion and ignores incidentals.
 
 ### Alternatives
 
-* [motif](https://github.com/Invocatis/motif)
+[motif](https://github.com/Invocatis/motif)
+
+I learned about motif halfway through writing Avow. I decided to write it anyway because I think
+protocols are a better (open to extension) implementation decision.
 
 ---
 

@@ -41,14 +41,14 @@
     (every? boolean (map avow expected actual)))
   IPersistentVector
   (avow* [expected actual]
-    (if (== (count expected) (count actual))
-      (every? boolean (map avow expected actual))
-      false))
+    (and (== (count expected) (count actual))
+         (every? boolean (map avow expected actual))))
   MapEntry
   (avow* [[k v] actual]
     (cond
       (ifn? k) (avow v (k actual))
       (map? actual) (avow v (get actual k))
+      (map-entry? actual) (and (avow k (key actual)) (avow v (val actual)))
       :otherwise false))
   Map
   (avow* [expected actual]
