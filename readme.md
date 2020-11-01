@@ -24,7 +24,7 @@ essence of an assertion and ignores incidentals.
 (def successful-response {:status 200 :body some?})
 
 (deftest http-test
- (avow successful-response (http/get "http://my-app:3000")))
+ (is (avow successful-response (http/get "http://my-app:3000"))))
 
 ```
 
